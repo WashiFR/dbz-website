@@ -6,6 +6,7 @@
     list-style: none;
     text-decoration: none;
     scroll-behavior: smooth;
+    max-width: 100%;
 }
 
 h1{
@@ -151,6 +152,15 @@ section#presentation{
 }
 
 @media screen and (max-width: 900px) {  
+    section#presentation{
+        height: auto;
+    }
+
+    #presentation h1{
+        font-size: 3em;
+        padding: 100px 0;
+    }
+
     #presentation div{
         width: 70%;
     }
