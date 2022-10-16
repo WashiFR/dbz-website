@@ -27,20 +27,35 @@ nav{
 }
 
 nav img{
-    height: 9.5vh;
+    height: 9vh;
+    margin: 0 20px;
 }
 
-nav span{
-    color: orange;
+nav #check{
+    display: none;
+}
+
+nav .checkbtn{
+    position: absolute;
+    right: 50px;
+    top: 5vh;
+    transform: translate(50%, -50%);
+    display: none;
+    color: white;
+    font-size: 3em;
+    cursor: pointer;
 }
 
 nav a{
     display: flex;
     align-items: center;
+}
+
+nav a.nav-link{
     text-transform: uppercase;
     padding: 0 20px;
-    color: white;
     height: 100%;
+    color: white;
     font-family: sans-serif;
     font-size: medium;
     font-weight: bold;
@@ -58,20 +73,34 @@ nav a:hover:nth-of-type(2){
     color: white;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
     nav{
+        position: fixed;
         align-items: flex-start;
         flex-direction: column;
         height: auto;
-        position: relative;
     }
 
-    nav a{
-        display: flex;
+    nav div{
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .checkbtn{
+        display: block;
+    }
+
+    nav a.nav-link{
+        display: none;
         align-items: center;
         justify-content: center;
         padding: 20px 0;
         width: 100%;
+    }
+
+    #check:checked ~ a{
+        display: flex;
     }
 
 }
@@ -81,7 +110,7 @@ nav a:hover:nth-of-type(2){
 section#accueil{
     background-image: url(asset/goku-bg.png);
     background-size: cover;
-    background-position: center right;
+    background-position: center right 5%;
     height: 90vh;
 }
 
@@ -120,6 +149,12 @@ section#accueil{
     #accueil img{
         width: 90%;
         margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    section#accueil{
+        margin-top: 9vh;
     }
 }
 
