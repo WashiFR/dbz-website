@@ -7,10 +7,23 @@
     text-decoration: none;
     scroll-behavior: smooth;
     max-width: 100%;
+    font-family: sans-serif;
 }
 
-h1{
+body{
+    background-color: #222;
+}
+
+h1, h2{
     font-family: 'Josefin Sans', sans-serif;
+    color: orange;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+::selection{
+    background-color: orange;
+    color: white;
 }
 
 /* Navbar */
@@ -24,6 +37,7 @@ nav{
     position: sticky;
     top: 0;
     width: 100%;
+    z-index: 999;
 }
 
 nav img{
@@ -56,7 +70,6 @@ nav a.nav-link{
     padding: 0 20px;
     height: 100%;
     color: white;
-    font-family: sans-serif;
     font-size: medium;
     font-weight: bold;
 }
@@ -160,30 +173,29 @@ section#accueil{
 
 /* Section Présentation */
 
-section#presentation{
-    height: 100vh;
-    background-color: #222;
-}
-
 #presentation h1{
-    color: orange;
     font-size: 4em;
-    text-align: center;
-    padding: 100px;
+    padding: 100px 0;
 }
 
 #presentation div{
-    background-color: #333;
-    border-radius: 5px;
-    padding: 20px;
     margin: auto;
     width: 50%;
+}
+
+#presentation a{
+    color: orange;
+    text-decoration: underline;
+}
+
+#presentation h2{
+    font-size: 2.5em;
+    margin: 50px 0;
 }
 
 #presentation p{
     color: white;
     font-size: large;
-    font-family: sans-serif;
 }
 
 @media screen and (max-width: 900px) {  
@@ -192,12 +204,53 @@ section#presentation{
     }
 
     #presentation h1{
-        font-size: 3em;
-        padding: 100px 0;
+        font-size: 2.5em;
+    }
+
+    #presentation h2{
+        font-size: 2em;
     }
 
     #presentation div{
         width: 70%;
+    }
+
+}
+
+/* Footer */
+
+footer{
+    background-color: black;
+    margin-top: 100px;
+    padding-bottom: 25px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+footer ul, footer div{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer img{
+    margin: 0 50px;
+    width: 150px;
+}
+
+footer p{
+    color: white;
+    font-size: small;
+    text-align: center;
+    margin: 5px 50px;
+    width: 150px;
+}
+
+@media screen and (max-width: 515px) {
+    footer img{
+        margin: 20px;
+        width: 150px;
     }
 
 }
