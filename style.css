@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap%27');
 
 *{
     margin: 0;
@@ -7,7 +8,7 @@
     text-decoration: none;
     scroll-behavior: smooth;
     max-width: 100%;
-    font-family: sans-serif;
+    font-family: 'Montserrat';
 }
 
 body{
@@ -180,7 +181,7 @@ section#accueil{
 
 #presentation div{
     margin: auto;
-    width: 50%;
+    width: 70%;
 }
 
 #presentation a{
@@ -196,13 +197,12 @@ section#accueil{
 #presentation p{
     color: white;
     font-size: large;
+    line-height: 1.5;
+    text-align: center;
 }
 
 @media screen and (max-width: 900px) {  
-    section#presentation{
-        height: auto;
-    }
-
+   
     #presentation h1{
         font-size: 2.5em;
     }
@@ -212,7 +212,12 @@ section#accueil{
     }
 
     #presentation div{
-        width: 70%;
+        width: 85%;
+    }
+
+    #presentation p{
+        font-size: medium;
+        text-align: start;
     }
 
 }
