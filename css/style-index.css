@@ -122,7 +122,7 @@ nav a:hover:nth-of-type(2){
 /* Section Accueil */
 
 section#accueil{
-    background-image: url(asset/goku-bg.png);
+    background-image: url(../image/goku-bg.png);
     background-size: cover;
     background-position: center right 5%;
     height: 90vh;
