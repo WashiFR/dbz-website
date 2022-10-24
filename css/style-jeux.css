@@ -137,85 +137,139 @@ nav a:hover:nth-of-type(2){
 
 }
 
-/* Section Manga */
+/* Section Jeux */
 
-#manga h1{
-    font-size: 2.5em;
-    padding: 50px 0;
+#jeux p{
+    color: white;
+    font-size: large;
+    line-height: 1.5;
+    text-align: center;
 }
 
-#manga h2{
-    font-size: 2em;
-    padding: 50px 0;
-    text-align: start;
-    margin-left: 10%;
-}
-
-#manga .manga-db, .manga-dbs, .manga-so{
+#jeux .container{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 70%;
-    margin: auto;
+    flex-direction: column;
 }
 
-#manga .texte{
-    margin: 10px 0;
+#jeux .container > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
 }
 
-#manga li{
-    color: white;
-    list-style: url("../image/boule-cristal-petit.png");
+#jeux .container > div:nth-child(2n){
+    flex-direction: row-reverse;
+    background-color: #111;
+}
+
+#jeux .texte{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+}
+
+#jeux span{
+    color: orange;
+    font-size: larger;
+}
+
+#jeux p > a{
+    color: orange;
+    text-decoration: underline;
+}
+
+#jeux img{
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px;
+}
+
+#jeux button{
+    width: 150px;
+    height: 50px;
+    margin-top: 50px;
+    background-color: orange;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 10px rgb(221, 148, 13);
     font-size: large;
-    line-height: 2;
+    font-weight: bold;
+    animation: bouton;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
 }
 
-#manga div img{
-    height: 200px;
-    margin: 0 10px;
-    box-shadow: 5px 10px 5px black;
+#jeux button:hover{
+    cursor: pointer;
 }
 
-@media screen and (max-width: 1050px) {
-    #manga .manga-db, .manga-dbs, .manga-so{
-        width: 85%;
+@keyframes bouton {
+    0%{
+        box-shadow: 0 0 5px rgb(221, 148, 13);
+    }
+    100%{
+        box-shadow: 0 0 15px rgb(221, 148, 13);
     }
 }
 
-@media screen and (max-width: 970px) {
-
-    #manga .manga-db, .manga-dbs, .manga-so{
-        justify-content: center;
+@media screen and (max-width: 1100px) {
+    #jeux p{
+        font-size: medium;
     }
 
-    #manga .image{
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
+    #jeux span{
+        font-size: large;
     }
 
-    #manga div img{
-        margin: 10px;
+    #jeux button{
+        margin: 25px 0;
     }
 }
 
 @media screen and (max-width: 950px) {
-    #manga h1{
-        padding: 50px 0;
-        padding-top: 150px;
+    #jeux .container > div{
+        flex-direction: column;
+        height: auto;
     }
 
+    #jeux .container > div:nth-child(2n){
+        flex-direction: column;
+    }
+
+    #jeux img{
+        width: 70%;
+        margin: 50px 0;
+    }
+
+    #jeux .first-img{
+        margin-top: 150px;
+    }
+
+    #jeux .texte{
+        width: 85%;
+    }
 }
 
-@media screen and (max-width: 600px) {
-    #manga h2{
-        text-align: center;
-        margin-left: 0;
+@media screen and (max-width: 500px) {    
+    #jeux img{
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+        margin-bottom: 50px;
+        box-shadow: 0 0 0;
     }
 
-    #manga li{
-        font-size: medium;
+    #jeux button{
+        margin: 50px 0;
+    }
+
+    #jeux .first-img{
+        margin-top: 10vh;
     }
 }
 
