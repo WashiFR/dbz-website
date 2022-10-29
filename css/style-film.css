@@ -15,6 +15,10 @@ body{
     background-color: #222;
 }
 
+h1{
+    background-color: #111;
+}
+
 h1, h2{
     font-family: 'Josefin Sans', sans-serif;
     color: orange;
@@ -141,7 +145,7 @@ nav a:hover:nth-of-type(2){
 
 #film h1{
     font-size: 3em;
-    padding: 5%;
+    padding: 50px 0;
 }
 
 #film h2{
@@ -167,6 +171,8 @@ nav a:hover:nth-of-type(2){
 #film img{
     height: 300px;
     margin-bottom: 50px;
+    box-shadow: 0 5px 5px black;
+    border-radius: 5px;
 }
 
 #film .img, .txt{
@@ -188,10 +194,15 @@ nav a:hover:nth-of-type(2){
 @media screen and (max-width: 950px) {
     #film h1{
         padding-top: 20vh;
+        font-size: 2.5em;
     }
 
     #film h2{
         padding: 10%;
+    }
+
+    #film p{
+        font-size: medium;
     }
     
     #film .dbz, #film .dbs, .oav{

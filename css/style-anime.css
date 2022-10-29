@@ -141,93 +141,111 @@ nav a:hover:nth-of-type(2){
 
 }
 
-/* Section Manga */
+/* Section Anime */
 
-#manga h1{
-    font-size: 2.5em;
+#anime h1{
+    font-size: 3em;
     padding: 50px 0;
 }
 
-#manga h2{
+#anime h2{
     font-size: 2em;
-    padding: 50px 0 50px 10%;
-    text-align: start;
+    padding: 5%;
 }
 
-#manga .manga-db, .manga-dbs, .manga-so{
+#anime .title-2n{
+    background-color: #111;
+}
+
+#anime .db, .dbz, .dbgt, .dbs{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 70%;
-    margin: auto;
+    justify-content: space-evenly;
+    height: 60vh;
 }
 
-#manga .texte{
-    margin: 10px 0;
+#anime .dbz, .dbs{
+    background-color: #111;
 }
 
-#manga li{
+#anime .dbs{
+    padding-bottom: 100px;
+}
+
+#anime .txt{
+    width: 50%;
+}
+
+#anime p{
+    text-align: center;
     color: white;
-    list-style: url("../image/boule-cristal-petit.png");
     font-size: large;
-    line-height: 2;
+    line-height: 1.5;
 }
 
-#manga div img{
-    height: 200px;
-    margin: 0 10px;
-    box-shadow: 5px 7px 5px black;
+#anime img{
+    height: 500px;
+}
+
+.dbz img{
+    transform: scaleX(-1);
+}
+
+.db, .dbgt{
+    flex-direction: row-reverse;
 }
 
 @media screen and (max-width: 1050px) {
-    #manga .manga-db, .manga-dbs, .manga-so{
-        width: 85%;
+    #anime img{
+        height: 400px;
     }
-}
-
-@media screen and (max-width: 970px) {
-
-    #manga .manga-db, .manga-dbs, .manga-so{
-        justify-content: center;
-    }
-
-    #manga .image{
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-    #manga div img{
-        margin: 10px;
-    }
+    
 }
 
 @media screen and (max-width: 950px) {
-    #manga h1{
-        padding: 50px 0;
-        padding-top: 150px;
+    #anime h1{
+        padding-top: 20vh;
+        font-size: 2.5em;
     }
 
-}
-
-@media screen and (max-width: 600px) {
-    #manga h2{
-        text-align: center;
-        margin-left: 0;
-        padding-left: 0;
+    #anime img{
+        height: 300px;
     }
 
-    #manga li{
+    #anime p{
         font-size: medium;
     }
+    
+}
+
+@media screen and (max-width: 750px) {
+    #anime .db, .dbz, .dbgt, .dbs{
+        flex-direction: column;
+        height: auto;
+    }
+
+    #anime h2{
+        padding: 10%;
+    }
+
+    #anime img{
+        height: 300px;
+    }
+
+    #anime .txt{
+        width: 80%;
+    }
+
+    #anime p{
+        margin: 20px 0;
+    }
+    
 }
 
 /* Footer */
 
 footer{
     background-color: black;
-    margin-top: 100px;
     padding-bottom: 25px;
     color: white;
     flex-wrap: wrap;
