@@ -17,13 +17,13 @@ body{
 
 h1{
     background-color: #111;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 h1, h2{
     font-family: 'Josefin Sans', sans-serif;
     color: orange;
-    text-align: center;
-    text-transform: uppercase;
 }
 
 ::selection{
@@ -148,85 +148,87 @@ nav a:hover:nth-of-type(2){
     padding: 50px 0;
 }
 
-#film h2{
-    font-size: 2em;
-    padding: 5%;
-}
-
-#film .dbs-title{
-    background-color: #111;
-}
-
-#film .dbz, .dbs, .oav{
+#film .container{
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    flex-direction: column;
 }
 
-#film .img{
+#film .container > div{
     display: flex;
     justify-content: space-evenly;
+}
+
+#film .container > div > div{
+    display: flex;
+    padding: 20px;
+    width: 30%;
 }
 
 #film img{
-    height: 300px;
-    margin-bottom: 50px;
-    box-shadow: 0 5px 5px black;
-    border-radius: 5px;
+    width: 200px;
 }
 
-#film .img, .txt{
-    width: 45%;
+#film .txt{
+    padding: 10px 0 10px 20px;
+    width: 70%;
 }
 
 #film p{
-    text-align: center;
     color: white;
     font-size: large;
     line-height: 1.5;
 }
 
-#film .dbs{
-    flex-direction: row-reverse;
-    background-color: #111;
+@media screen and (max-width: 1200px) {
+    #film .container > div > div{
+        display: flex;
+        padding: 20px;
+        width: 40%;
+    }
+
+    #film img{
+        width: 200px;
+    }
 }
 
 @media screen and (max-width: 950px) {
     #film h1{
-        padding-top: 20vh;
         font-size: 2.5em;
+        padding-top: 20vh;
     }
 
     #film h2{
-        padding: 10%;
+        font-size: larger;
+    }
+
+    #film .container{
+        align-items: center;
+        margin: 0 20px;
+    }
+
+    #film .container > div{
+        flex-direction: column;
+        width: 70%;
+    }
+
+    #film .container > div > div{
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    #film img{
+        width: 150px;
     }
 
     #film p{
         font-size: medium;
     }
-    
-    #film .dbz, #film .dbs, .oav{
-        flex-direction: column;
-    }
-
-    #film .img, .txt{
-        width: 85%;
-    }
-
-    #film p{
-        margin-bottom: 50px;
-    }
 }
 
-@media screen and (max-width: 550px) {
-    #film .img{
-        width: 100%;
+@media screen and (max-width: 750px) {
+    #film .container > div{
+        width: 90%;
     }
-
-    #film img{
-        height: 250px;
-    }
-    
 }
 
 /* Footer */
