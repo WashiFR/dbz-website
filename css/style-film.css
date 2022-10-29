@@ -149,26 +149,73 @@ nav a:hover:nth-of-type(2){
     padding: 5%;
 }
 
-#film div{
+#film .dbs-title{
+    background-color: #111;
+}
+
+#film .dbz, .dbs, .oav{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
-#film p{
-    text-align: center;
-    color: white;
-    font-size: x-large;
-    font-family: 'Josefin Sans';
-    width: 50%;
-}
-
-#film #dbs{
-    flex-direction: row-reverse;
+#film .img{
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #film img{
     height: 300px;
+    margin-bottom: 50px;
+}
+
+#film .img, .txt{
+    width: 45%;
+}
+
+#film p{
+    text-align: center;
+    color: white;
+    font-size: large;
+    line-height: 1.5;
+}
+
+#film .dbs{
+    flex-direction: row-reverse;
+    background-color: #111;
+}
+
+@media screen and (max-width: 950px) {
+    #film h1{
+        padding-top: 20vh;
+    }
+
+    #film h2{
+        padding: 10%;
+    }
+    
+    #film .dbz, #film .dbs, .oav{
+        flex-direction: column;
+    }
+
+    #film .img, .txt{
+        width: 85%;
+    }
+
+    #film p{
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #film .img{
+        width: 100%;
+    }
+
+    #film img{
+        height: 250px;
+    }
+    
 }
 
 /* Footer */
