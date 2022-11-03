@@ -267,6 +267,10 @@ nav a:hover:nth-of-type(2){
     #jeux a{
         margin: 50px 0;
     }
+
+    #jeux p{
+        text-align: start;
+    }
 }
 
 /* Footer */
