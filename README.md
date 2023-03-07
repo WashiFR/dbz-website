@@ -5,4 +5,4 @@ Pour plus d'information sur le sujet consulté le document pdf : `Projet-mini-si
 
 ## Liens
 
-washifr.github.io/dbz-website
+https://washifr.github.io/dbz-website/
